@@ -1,0 +1,1008 @@
+/* --------------------------------------------------------------------
+全体構造
+--------------------------------------------------------------------*/
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #535353;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', Arial, ;
+  letter-spacing: 0.1em;
+  min-width: 1000px;
+}
+
+
+/* --------------------------------------------------------------------
+ヘッダー
+--------------------------------------------------------------------*/
+
+
+#home .header-list {
+  color: #ffffff;
+}
+
+#home header {
+  background: url(../images/top-view.jpg) no-repeat center, center;
+  background-size: cover;
+  height: 850px;
+  margin-bottom: 70px;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-list ul {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.header-list ul li {
+  color: #ffffff;
+  font: 200 16px/1em 'noto sans japanese';
+  width: 80px;
+  margin: 35px 50px 0 0;
+  letter-spacing: 0.1em;
+  font-family: 'Noto Sans JP';
+  font-weight: 900;
+}
+
+.header-list ul a:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+header nav img {
+  margin-top: 20px;
+  margin-right: 450px;
+  max-width: none;
+}
+
+
+
+/* --------------------------------------------------------------------
+スクロールダウン
+--------------------------------------------------------------------*/
+
+
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  position: relative;
+  left: 50%;
+  bottom: 10px;
+  display: inline-block;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*========= スクロールダウンのためのCSS ===============*/
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  position: relative;
+  left: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: #535353;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #808080;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+
+/* --------------------------------------------------------------------
+共通部分
+--------------------------------------------------------------------*/
+
+.fa-angle-up {
+  color: #535353;
+}
+
+.aside {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+
+}
+
+/* ------------TOPICS ------------*/
+
+
+.topics {
+  width: 450px;
+  position: relative;
+  margin-left: 30px;
+  /* background-color: red; */
+}
+
+/* 棒線を追加 */
+.topics::after {
+  position: absolute;
+  /*--positionを追加--*/
+  top: 0;
+  left: 100%;
+  margin: 0 1rem;
+  content: "";
+  width: 1px;
+  /*--縦線の太さ(幅)--*/
+  height: 90%;
+  background-color: #707070;
+  /*--縦線の色--*/
+}
+
+
+.topics h3 {
+  margin-bottom: 30px;
+}
+
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+}
+
+.card .left {
+  margin-right: 20px;
+}
+
+.card p {
+  line-height: 1.8;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+h3 span {
+  font-size: 20px;
+}
+
+
+/* ------------NEWS------------*/
+
+.news {
+  margin-right: 50px;
+  width: 390px;
+}
+
+.news h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.news .left {
+  line-height: 1.8;
+}
+
+.news .left p {
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.news .left p {
+  margin-top: 5px;
+}
+
+.news .right {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.news img {
+  margin: 40px 0 0 40px;
+}
+
+.news-content {
+  display: flex;
+  align-items: center;
+}
+
+.news .img01 {
+  margin-left: -9px;
+}
+
+.news .img02 {
+  margin-left: 40px;
+}
+
+.news .img03 {
+  margin-left: 80px;
+}
+
+
+.news a:hover,
+.topics a:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+
+
+
+/* アバウトとコースのヘッダー共通 */
+#about header ul li,
+#course header ul li {
+  color: #535353;
+}
+
+
+
+
+#about .logo-top,
+#course .logo-top {
+
+  margin-bottom: 150px;
+}
+
+
+
+
+.back-top img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+}
+
+.back-top img:hover {
+  opacity: 0.7;
+}
+
+.back-top {
+  /* display: none; */
+  position: fixed;
+  bottom: 100px;
+  right: 80px;
+}
+
+/* --------------------------------------------------------------------
+フッター
+--------------------------------------------------------------------*/
+
+footer {
+  background-color: #606060;
+  height: 370px;
+}
+
+footer .sns-icon-list {
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+footer .sns-icon-list .youtube {
+  margin: 0 40px;
+}
+
+footer nav {
+  color: #ffffff;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin: 110px auto 0 auto;
+}
+
+.footer-nav ul li {
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  font-size: 15px;
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 90px;
+}
+
+.footer .sns-icon-list a:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.footer .footer-nav ul li:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+footer .sns-icon-list .instagram {
+  position: relative;
+  top: 2px;
+}
+
+/* --------------------------------------------------------------------
+メイン
+--------------------------------------------------------------------*/
+.title {
+  font-size: 30px;
+  margin: 50px 0 110px 0;
+  letter-spacing: 0.2em;
+  animation-name: fadeInAnime;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 横線の装飾 */
+.title {
+  font-family: 'Noto Sans JP';
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  /* text-transform: uppercase; */
+}
+
+.title::before {
+  content: '';
+  display: inline-block;
+  margin-right: 20px;
+  width: 100px;
+  height: 1px;
+  margin-top: 15px;
+  background-color: #808080;
+}
+
+
+.top-main-content {
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 230px;
+
+}
+
+.top-main-content img {
+  margin-bottom: 30px;
+  margin-left: 110px;
+}
+
+.top-main-copy {
+  margin-left: 110px;
+}
+
+.top-main-content h3 {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.top-main-content p {
+  line-height: 1.9;
+}
+
+.top-main-content h3,
+.top-main-content p {
+  padding-left: 20px;
+}
+
+.top-sub-content {
+  height: 1420px;
+  background: url(../images/sub-image.png)no-repeat center center;
+  background-color: #F4F2EC;
+  position: relative
+}
+
+
+.kazari {
+  font-size: 95px;
+  font-weight: 900;
+  color: #A7A6A2;
+  text-align: center;
+  position: relative;
+  top: -70px;
+}
+
+
+.inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+.select {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sub-step01 {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 300px;
+  line-height: 1.9;
+}
+
+.sub-step01 a:hover,
+.sub-step02 a:hover,
+.sub-step03 a:hover {
+  font-weight: 500;
+  color: #7A99AA;
+}
+
+
+.sub-step02 {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 185px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.sub-step03 {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 160px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+
+.step1,
+.step2,
+.step3 {
+  color: #ffffff;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-line img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 80px;
+}
+
+/* --------------------------------------------------------------------
+アバウト
+--------------------------------------------------------------------*/
+
+
+#about .head-content {
+  background-color: #F4F2EC;
+}
+
+
+#about .about-main-content {
+  width: 1000px;
+  margin: 0px auto;
+  margin-bottom: 200px;
+}
+
+.about-title {
+  font-size: 40px;
+  font-weight: 300;
+  font-family: 'Noto Sans JP';
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin-bottom: 110px;
+  animation-name: fadeInAnime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.about .right {
+  margin-left: 50px;
+}
+
+
+.about p {
+  line-height: 2.0;
+  width: 460px;
+  font-size: 16px;
+}
+
+
+
+.about02 h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+
+.about-img-line img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+  /* margin-bottom: 80px; */
+  /* margin-top: 200px; */
+}
+
+.about03-content .date {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/* 横線の装飾 */
+.concept {
+  display: flex;
+  align-items: center;
+  /* text-transform: uppercase; */
+}
+
+.concept::after {
+  content: '';
+  display: inline-block;
+  margin: 0 20px;
+  width: 40px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #808080;
+}
+
+/* --------------------------------------------------------------------
+HOW TO GO
+--------------------------------------------------------------------*/
+
+.howto-sub-content {
+  background-color: #535353;
+  margin-bottom: 80px;
+}
+
+.howto-inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+
+.howto-inner h2 {
+  font-size: 30px;
+  font-family: 'Noto Sans JP';
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+
+
+.howto-inner .setsumei {
+  text-align: center;
+  letter-spacing: 0.3em;
+  line-height: 1.8;
+  margin-bottom: 110px;
+  font-family: 'Noto Sans JP';
+  font-weight: 700;
+  color: #fff;
+}
+
+.howto-step {
+  background-color: #EBE9E4;
+  width: 300px;
+  padding: 10px;
+  margin-right: 20px;
+
+}
+
+.howto-content {
+  display: flex;
+  justify-content: center;
+}
+
+.howto-step img {
+  margin-bottom: 50px;
+}
+
+.howto-step h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.2em;
+}
+
+.howto-step p {
+  text-align: left;
+  letter-spacing: 0.2em;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  width: 270px;
+  margin: 30px auto;
+}
+
+.howto-step .btn {
+
+  margin-bottom: 50px;
+}
+
+/* btn */
+.btn1 {
+  position: relative;
+  top: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.btn1 span {
+  margin-right: 5px;
+}
+
+
+.howto-step .stepa {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #C5C2C2;
+  padding: 10px;
+}
+
+.howto-step .stepb {
+  border: 1px solid #C5C2C2;
+  padding: 10px 20px;
+  display: block;
+}
+
+.btn1 i {
+  color: #C5C2C2;
+}
+
+.btn span {
+  margin-right: 20px;
+}
+
+.btn i {
+  color: #C5C2C2;
+}
+
+/* --------------------------------------------------------------------
+コース
+--------------------------------------------------------------------*/
+
+
+#course .head-content {
+  background-color: #F4F2EC;
+}
+
+
+
+
+#course .course-main-content {
+  width: 1000px;
+  margin: 0px auto;
+  padding-bottom: 200px;
+  margin-bottom: 80px;
+  background-color: #F4F2EC;
+}
+
+.course-title {
+  font-size: 40px;
+  font-weight: 300;
+  font-family: 'Noto Sans JP';
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin-bottom: 50px;
+  text-align: center;
+  animation-name: fadeInAnime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.course-main-content .setsumei {
+  margin-bottom: 160px;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+
+/* cooking */
+
+.cooking {
+  width: 650px;
+  /*要素の幅指定*/
+  height: 640px;
+  /*要素の高さ指定*/
+  background-image: url(../images/course-img-cooking.png);
+  background-position: top bottom;
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-bottom: 50px;
+
+}
+
+
+.cooking img {
+  position: relative;
+  left: 670px;
+  top: 50px;
+  width: 200px;
+  height: 70px;
+}
+
+.cooking h2 {
+  font-size: 25px;
+  color: black;
+  position: relative;
+  left: 420px;
+  top: 150px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.cooking span {
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.cooking p {
+  font-size: 13px;
+  width: 320px;
+  margin-top: 360px;
+  margin-left: 100px;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+}
+
+/* bread */
+
+.bread {
+  width: 1000px;
+  /*要素の幅指定*/
+  height: 840px;
+  /*要素の高さ指定*/
+  background-image: url(../images/course-img-bread.png);
+  background-position: top bottom;
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-bottom: 120px;
+
+}
+
+
+.bread img {
+  position: relative;
+  left: -10px;
+  top: 100px;
+  width: 140px;
+  height: 70px;
+}
+
+.bread h2 {
+  font-size: 25px;
+  color: black;
+  position: relative;
+  left: -150px;
+  top: 180px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.bread span {
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.bread p {
+  font-size: 13px;
+  width: 370px;
+  margin-top: 310px;
+  margin-left: -360px;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+}
+
+/* cake */
+
+.cake {
+  width: 910px;
+  /*要素の幅指定*/
+  height: 730px;
+  /*要素の高さ指定*/
+  background-image: url(../images/course-img-cake.png);
+  background-position: top bottom;
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-bottom: 120px;
+
+}
+
+
+.cake img {
+  position: relative;
+  left: 560px;
+  top: 370px;
+  width: 110px;
+  height: 70px;
+}
+
+.cake h2 {
+  font-size: 25px;
+  color: black;
+  position: relative;
+  left: 450px;
+  top: 450px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.cake span {
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.cake p {
+  font-size: 13px;
+  width: 340px;
+  margin-top: 510px;
+  margin-left: 260px;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+}
+
+/* kids */
+
+.kids {
+  width: 880px;
+  /*要素の幅指定*/
+  height: 700px;
+  /*要素の高さ指定*/
+  background-image: url(../images/course-img-kids.png);
+  background-position: top bottom;
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+
+}
+
+
+.kids img {
+  position: relative;
+  left: 520px;
+  top: 120px;
+  width: 110px;
+  height: 70px;
+}
+
+.kids h2 {
+  font-size: 25px;
+  color: black;
+  position: relative;
+  left: 410px;
+  top: 200px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.kids span {
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.kids p {
+  font-size: 13px;
+  width: 340px;
+  margin-top: 330px;
+  margin-left: 220px;
+  line-height: 1.8;
+}

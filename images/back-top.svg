@@ -1,0 +1,7 @@
+<svg id="back-top" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <circle id="楕円形_1" data-name="楕円形 1" cx="150" cy="150" r="150" fill="#434343"/>
+  <text id="T" transform="translate(86 135)" fill="#fff" font-size="53" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500"><tspan x="0" y="0">T</tspan></text>
+  <text id="O" transform="translate(129 135)" fill="#fff" font-size="53" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500"><tspan x="0" y="0">O</tspan></text>
+  <text id="P" transform="translate(179 135)" fill="#fff" font-size="53" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500"><tspan x="0" y="0">P</tspan></text>
+  <path id="パス_1" data-name="パス 1" d="M107.4,202.7l40.113-40.113L187.621,202.7" transform="translate(2.492 2.302)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+</svg>
